@@ -9,7 +9,7 @@ QUnit.begin = function() {
 
 test("Number 1", function() {
   var d = new LCDDisplay();
-  d.output(1);
+  d.output("1");
 
   equals(logOutput, " \n" + 
                     "|\n" +
@@ -20,7 +20,7 @@ test("Number 1", function() {
 
 test("Number 2", function() {
   var d = new LCDDisplay();
-  d.output(2);
+  d.output("2");
 
   equals(logOutput, "__\n" +
                     "   |\n" +
@@ -29,3 +29,13 @@ test("Number 2", function() {
                     "|__\n");
 });
 
+test("Number 12", function() {
+  var d = new LCDDisplay();
+  d.output("12");
+
+  equals(logOutput, "  __\n" +
+                    "|    |\n" +
+                    "|  __|\n" +
+                    "| |\n" +
+                    "| |__\n");
+});
