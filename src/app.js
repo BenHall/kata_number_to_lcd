@@ -1,16 +1,16 @@
 var LCDDisplay = function() {};
 
 LCDDisplay.prototype.output = function(n) {
-  var oneOutline = ["", "|", "|", "|", "|"];
+  var oneOutline = [" ", "|", "|", "|", "|"];
   var twoOutline = ["__", "   |", " __|", "|","|__"];
+
+  var numbers = {1: oneOutline, 2: twoOutline}
 
   var result = "";
   
   for(var i = 0; i < 5; i++) {
-    if(n == 1) 
-      result += oneOutline[i] + "\n";
-    else
-      result += twoOutline[i] + "\n";
+    var arr = numbers[n];
+    result += arr[i] + "\n";
   }
 
   console.log(result);

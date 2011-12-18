@@ -11,7 +11,7 @@ test("Number 1", function() {
   var d = new LCDDisplay();
   d.output(1);
 
-  equals(logOutput, "\n" + 
+  equals(logOutput, " \n" + 
                     "|\n" +
                     "|\n" + 
                     "|\n"+
@@ -28,3 +28,4 @@ test("Number 2", function() {
                     "|\n" +
                     "|__\n");
 });
+
